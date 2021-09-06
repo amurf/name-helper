@@ -22,7 +22,7 @@ export const useFavouritesStore = defineStore('favourites', {
 		reset() {
 			this.saved          = new Set();
 			this.familyName     = undefined;
-			this.showFamilyName = false,
+			this.showFamilyName = false;
 		},
 	},
 })
