@@ -43,7 +43,7 @@ const favourites = useFavouritesStore();
 
 <template>
 
-  <SwitchGroup>
+  <SwitchGroup v-if="favourites.familyName">
   <div class="flex items-center">
     <SwitchLabel class='mx-2'>Show family name</SwitchLabel>
     <Switch
