@@ -60,11 +60,12 @@ const favourites = useFavouritesStore();
   </SwitchGroup>
 
 
-  <div v-if="!skipped && !favourites.familyName" 
+  <div v-if="!skipped && !favourites.familyName"
        class="flex items-center justify-center h-screen">
-    <div class="bg-indigo-800 font-bold rounded-lg border shadow-lg p-10">
-      <input type="text" class='p-2' v-model.lazy.trim="favourites.familyName" />
-      <p class='text-sm flex justify-center p-2 text-white'>Press ENTER or S to skip</p>
+    <div class="bg-indigo-800 font-bold rounded-lg border shadow-lg p-10 flex items-center justify-center flex-col">
+      <label for="familyname" class='text-white'>Enter your family name</label>
+      <input type="text" id="familyname" class='p-2' v-model.lazy.trim="favourites.familyName" />
+      <p class='text-sm flex justify-center p-2 text-white'>Press <span class='mx-2 px-1 border'>ENTER</span>to begin or <button @click="skipped = true" class='mx-2 px-1 border'>S</button> to skip</p>
     </div>
   </div>
 
