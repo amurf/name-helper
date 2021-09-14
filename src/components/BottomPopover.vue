@@ -14,14 +14,14 @@ function copy() {
 <template>
 
 	<Popover v-slot="{ open }" class='fixed bottom-0 right-0 popover-width'>
-		<PopoverPanel class='bg-blue-100'>
+		<PopoverPanel class='bg-primarylight'>
 			<div class="flex flex-col">
 
-				<button @click="copy">Copy</button>
+				<button @click="copy" class='bg-primary text-white p-2'>Copy</button>
 
-				<ul>
-					<li v-for="favourite in favourites.saved.values()" 
-					class='hover:bg-blue-200 p-2'>
+				<ul class='w-full'>
+					<li v-for="favourite in favourites.saved.values()"
+					class='hover:bg-primarylight p-2 m-2 text-white'>
 						{{ favourite }}
 						<template v-if="favourites.showFamilyName">
 							{{ favourites.familyName }}
@@ -32,7 +32,7 @@ function copy() {
 			</div>
 	</PopoverPanel>
 
-	<PopoverButton class='w-full p-2 bg-blue-300'>
+	<PopoverButton class='w-full p-2 bg-primary text-white'>
 		Favourites ({{ favourites.saved.size }})
 		<ChevronDownIcon v-if="open" class="inline h-8 w-8" />
 		<ChevronUpIcon v-else class="inline h-8 w-8" />

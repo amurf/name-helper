@@ -44,11 +44,11 @@ const favourites = useFavouritesStore();
 <template>
 
   <SwitchGroup v-if="favourites.familyName">
-  <div class="flex items-center">
-    <SwitchLabel class='mx-2'>Show family name</SwitchLabel>
+  <div class="flex items-center justify-center">
+    <SwitchLabel class='mx-2 p-1'>Show family name</SwitchLabel>
     <Switch
       v-model="favourites.showFamilyName"
-      class="relative inline-flex items-center h-6 rounded-full w-11 bg-indigo-400"
+      class="relative inline-flex items-center h-6 rounded-full w-11 bg-secondary"
 
       >
       <span
@@ -61,17 +61,17 @@ const favourites = useFavouritesStore();
 
 
   <div v-if="!skipped && !favourites.familyName"
-       class="flex items-center justify-center h-screen">
-    <div class="bg-indigo-800 font-bold rounded-lg border shadow-lg p-10 flex items-center justify-center flex-col">
+       class="flex items-center justify-center h-screen mx-2">
+    <div class="bg-primary font-bold rounded-lg border shadow-lg p-5 flex items-center justify-center flex-col">
       <label for="familyname" class='text-white'>Enter your family name</label>
       <input type="text" id="familyname" class='p-2' v-model.lazy.trim="favourites.familyName" />
-      <p class='text-sm flex justify-center p-2 text-white'>Press <span class='mx-2 px-1 border'>ENTER</span>to begin or <button @click="skipped = true" class='mx-2 px-1 border'>S</button> to skip</p>
+      <p class='text-sm flex justify-center p-2 text-white'>Press <span class='mx-1 px-1 border'>ENTER</span>to begin or <button @click="skipped = true" class='mx-1 px-1 border'>S</button> to skip</p>
     </div>
   </div>
 
   <div v-else class='flex flex-col items-center'>
 
-    <div class="flex items-center justify-center bg-indigo-800 text-white w-screen p-2">
+    <div class="flex items-center justify-center bg-primary text-white w-screen p-2">
       <button @click="shuffledNames = generateNewNames()">More names</button>
     </div>
     <NameList :names="shuffledNames" />
@@ -81,7 +81,7 @@ const favourites = useFavouritesStore();
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   font-size: 20px;
 }
 </style>
