@@ -25,8 +25,4 @@ const props = defineProps({
 </template>
 
 <style scoped>
-
-.popover-item {
-  @apply hover:bg-blue-200 p-2;
-}
 </style>
