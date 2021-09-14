@@ -4,6 +4,8 @@ import './index.css'
 
 import { createPinia } from 'pinia'
 
+import './assets/css/variables.css';
+
 
 const app = createApp(App)
 

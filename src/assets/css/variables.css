@@ -1,0 +1,15 @@
+:root {
+  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+  --primary-colour: #453DAC;
+  --primary-colour-light: #7A68DF;
+  --primary-colour-dark: #00157C;
+
+  --secondary-colour: #3D6DAC;
+  --secondary-colour-light: #719BDE;
+  --secondary-colour-dark: #00437C;
+
+  --background-dark: #E1E2E1;
+  --background-light: #F5F5F6;
+}
+
