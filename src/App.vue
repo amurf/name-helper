@@ -49,6 +49,7 @@ const favourites = useFavouritesStore();
     <Switch
       v-model="favourites.showFamilyName"
       class="relative inline-flex items-center h-6 rounded-full w-11 bg-secondary"
+        :class="favourites.showFamilyName ? 'bg-secondary' : 'bg-disabled'"
 
       >
       <span

@@ -15,6 +15,7 @@ module.exports = {
       bglight: "var(--background-light)",
 
       white: "#FFF",
+      disabled: "#a4a7ab",
 
     },
     extend: {},
